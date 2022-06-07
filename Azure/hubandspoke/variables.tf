@@ -28,5 +28,25 @@ type = map(any)
         address_space = ["10.222.12.0/22"]
     }
 }
+}
+
+variable "subnets" {
+
+type = map(any)
+ 
+ default = {
+    subnet_1 = {
+        name = "hub"
+        address_space = ["10.222.8.128/26"]
+    }
+    subnet_2 = {
+        name = "spoke_1"
+        address_space = ["10.222.8.0/27"]
+    }
+    subnet_3 = {
+        name = "spoke_2"
+        address_space = ["10.222.8.192/27"]
+    }
+}
 
 }
